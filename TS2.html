@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Bhushan Ingale | Portfolio Elements</title>
+		<title>Bhushan Ingale | Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -32,9 +32,6 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="index.html#domains">Project Domains</a></li>
-								<li><a href="RL.html">Rice Leaf Disease Detection using CNN</a></li>
-								<li><a href="BA.html">Data Science @ British Airways</a></li>
-								<li><a href="NN.html">Neural Networks from Scratch, in raw Python!</a></li>
 								<li><a href="index.html#about">About Me</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
@@ -45,8 +42,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>TS2</h2>
-								<p>TS2!</p>
+								<h2>Forest Cover Type Prediction</h2>
+								<p>A Machine Learning Project to classify 7 forest cover types in 4 wilderness areas.</p>
 							</div>
 						</header>
 
@@ -54,21 +51,147 @@
 							<div class="wrapper">
 								<div class="inner">
 
+									<h1 id="forest-cover-type-prediction">Forest Cover Type Prediction</h1>
+<p>A Machine Learning Project to classify 7 forest cover types in 4 wilderness areas.</p>
+<h2 id="project-overview">Project Overview</h2>
+<h3 id="business-problem-">Business Problem:</h3>
+<p>The goal of the Project is to predict seven different Cover Types in four different Wilderness Areas of the Roosevelt National Forest of Northern Colorado with the best accuracy.</p>
+<h3 id="machine-learning-problem-">Machine Learning Problem:</h3>
+<p>It is a Multi-Class Classification Problem.</p>
+<h3 id="tasks-">Tasks:</h3>
+<ul>
+<li><p>Task 1: Prepare a complete Data Analysis report on the given data.</p>
+</li>
+<li><p>Task 2: Create a Predictive Model which helps to predict seven different Cover Types in four different Wilderness Areas of the Forest with the best accuracy.</p>
+</li>
+</ul>
+<h2 id="installation-setup">Installation &amp; Setup</h2>
+<h3 id="resources-used">Resources Used</h3>
+<ul>
+<li>Editor/IDE: Jupyter Notebook.</li>
+<li>Environment/Backend: Conda</li>
+<li>Python Version: 3.9</li>
+</ul>
+<h3 id="python-packages-used">Python Packages Used</h3>
+<ul>
+<li>General Purpose: warnings, collections</li>
+<li>Data Wrangling: pandas, numpy</li>
+<li>Data Visualization: matplotlib, seaborn</li>
+<li>Machine Learning: scipy, sklearn</li>
+</ul>
+<h2 id="data">Data</h2>
+<p>The actual forest cover type for a given 30 x 30 meter cell was determined from US Forest Service (USFS) Region 2 Resource Information System data. Independent variables were then derived from data obtained from the US Geological Survey and USFS. The data is in raw form (not scaled) and contains binary columns of data for qualitative independent variables such as wilderness areas and soil type.</p>
+<p>This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices.</p>
+<p>Data: <code>forest_train.csv</code></p>
+<h2 id="code-structure">Code Structure</h2>
+<pre><code>├── dataset
+│   └── forest_train<span class="hljs-selector-class">.csv</span>
+├── report
+│   ├── Forest Cover Prediction<span class="hljs-selector-class">.pdf</span>
+│   └── Forest Cover Prediction<span class="hljs-selector-class">.pptx</span>
+├── src
+│   ├── data
+│   │   └── forest_train<span class="hljs-selector-class">.csv</span>
+│   └── Forest Cover Prediction<span class="hljs-selector-class">.ipynb</span>
+├── <span class="hljs-selector-class">.gitignore</span>
+└── README.md
+</code></pre><h2 id="results-evaluation">Results &amp; Evaluation</h2>
+<h3 id="model-comparison-report">Model Comparison Report</h3>
+<ul>
+<li><p>Random Forest achieved the highest accuracy: 85.88% (Although, Overfit!)</p>
+</li>
+<li><p>Best Parameters after Hyperparameter Tuning for Random Forest:</p>
+<pre><code>RandomForestClassifier(<span class="hljs-attr">n_estimators=30,criterion='gini',</span> <span class="hljs-attr">n_jobs=-1,</span> 
+                      <span class="hljs-attr">max_depth=25,</span> <span class="hljs-attr">min_samples_leaf=4,</span> <span class="hljs-attr">max_features='log2',</span> <span class="hljs-attr">bootstrap=True,</span>
+                      <span class="hljs-attr">random_state=4)</span>
+</code></pre></li>
+<li>Models used for Voting Classifier: [KNN, LogisticRegression, DecisionTree, RandomForests]</li>
+</ul>
+<h3 id="detailed-model-comparison-criteria-accuracy-">Detailed Model Comparison (Criteria: Accuracy)</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy on Raw Data</th>
+<th>Accuracy on Scaled Data</th>
+<th>Accuracy after Removing 5 Features (Pearson Correlation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LinearSVC</td>
+<td>0.519637</td>
+<td>0.589673</td>
+<td>0.337270</td>
+</tr>
+<tr>
+<td>DecisionTreeClassifier</td>
+<td>0.770393</td>
+<td>0.727547</td>
+<td>0.768470</td>
+</tr>
+<tr>
+<td>LogisticRegression</td>
+<td>0.663279</td>
+<td>0.644328</td>
+<td>0.673167</td>
+</tr>
+<tr>
+<td>GaussianNB</td>
+<td>0.581159</td>
+<td>0.581434</td>
+<td>0.585004</td>
+</tr>
+<tr>
+<td><strong><code>RandomForestClassifier</code></strong></td>
+<td>0.855809</td>
+<td>0.825597</td>
+<td><strong><code>0.858830</code></strong></td>
+</tr>
+<tr>
+<td>GradientBoostingClassifier</td>
+<td>0.793189</td>
+<td>0.750893</td>
+<td>0.795111</td>
+</tr>
+<tr>
+<td>KNNeighborsClassifier</td>
+<td>0.792365</td>
+<td>0.724801</td>
+<td>0.792365</td>
+</tr>
+<tr>
+<td>Voting Classifier ‘Soft Voting’</td>
+<td>0.815984</td>
+<td>0.779181</td>
+<td>0.817632</td>
+</tr>
+<tr>
+<td>Voting Classifier ‘Hard Voting’</td>
+<td>0.836034</td>
+<td>0.797033</td>
+<td>0.834660</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conclusion">Conclusion</h3>
+<p>Forest Cover Prediction Dataset was both tricky and easy in many ways because it had All-Numeric data with most of the features One-Hot-Encoded and No-Missing values. But it also had very Skewed features with 4.25% Outliers(IQR) and Least Correlated Data. With these datapoints, Random Forests Classifier achieved 82% Accuracy when trained on most important 49 features based on Pearson-r value based selection.</p>
+<h2 id="future-work">Future Work</h2>
+<p>XGBoost Algorithm may achieve better accuracy with Hyperparameter Tuning.</p>
+<h2 id="license">License</h2>
+<p><a href="https://choosealicense.com/licenses/mit/">MIT</a></p>
+
+
 									<section>
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<h4>Code</h4>
-										<pre><code>i = 0;
+										<h3 class="major">THIS IS OLD STRUCTURE BELOW</h3>
+										<p></p>
 
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
+									</section>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+									<section>
+										<h3 class="major">Project Overview</h3>
+										<p></p>
+
 									</section>
 
 									<section>
