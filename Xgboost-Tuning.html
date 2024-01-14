@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bhushan Ingale | Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#about">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>XGBoost Optimisation: Used Car Price Prediction</h2>
+								<p>A Project to study Hyperparameter Tuning to improve the model accuracy.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+
+									
+							
+									<h2 id="project-overview">Project Overview</h2>
+									<p>This project is part of the Coursera Project Network&#39;s Hands-On Certification Project.</p>
+									<h3 id="problem-statement-">Problem Statement:</h3>
+									<ul>
+									<li>Create Machine Learning Models to predict the car price.</li>
+									<li>Compare the accuracies with and without the Hyperparameter Tuning.</li>
+									</ul>
+									<h2 id="installation-setup">Installation &amp; Setup</h2>
+									<h3 id="resources-used">Resources Used</h3>
+									<ul>
+									<li>Editor/IDE: Jupyter Notebook</li>
+									<li>Environment/Backend: Conda</li>
+									<li>Python Version: 3.9</li>
+									</ul>
+									<h3 id="python-packages-used">Python Packages Used</h3>
+									<ul>
+									<li>General Purpose: zipfile, math</li>
+									<li>Data Wrangling: numpy, pandas, category_encoders</li>
+									<li>Data Visualization: matplotlib, seaborn, plotly.express</li>
+									<li>Machine Learning: sklearn, xgboost</li>
+									</ul>
+									<h2 id="data">Data</h2>
+									<p>The dataset <code>used_car_price.csv</code> is taken from Kaggle.</p>
+									<h2 id="code-structure">Code Structure</h2>
+									<pre><code>
+									├── data
+									│   └── used_car_price<span class="hljs-selector-class">.csv</span>
+									├── src
+									│   ├── XGBoost-Optimisation<span class="hljs-selector-class">.ipynb</span>
+									│   └── used_car_price<span class="hljs-selector-class">.csv</span>
+									├── <span class="hljs-selector-class">.gitignore</span>
+									└── README.md
+									</code></pre><h2 id="results-evaluation">Results &amp; Evaluation</h2>
+									<h3 id="model-comparison-report">Model Comparison Report</h3>
+									<p>We were able to improve the Model Accuracy after tuning the Hyperparameters of XGBoost Algorithm.</p>
+									<p>Here is the model comparison report:</p>
+									<table>
+									<thead>
+									<tr>
+									<th>Model</th>
+									<th>RMSE</th>
+									<th>R-Squared</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>XGBoost - Baseline</td>
+									<td>6678.044</td>
+									<td>0.8176</td>
+									</tr>
+									<tr>
+									<td>XGBoost - GridSearchCV</td>
+									<td>4988.293</td>
+									<td><strong>0.8982</strong></td>
+									</tr>
+									<tr>
+									<td>XGBoost - RandomSearchCV</td>
+									<td>4988.293</td>
+									<td><strong>0.8982</strong></td>
+									</tr>
+									</tbody>
+									</table>
+									<h3 id="conclusion">Conclusion</h3>
+									<p><strong>XGBoost</strong> is a very powerful algorithm that comes with great default parameters. We were able to improve the accuracy for the <code>Used_Car_Price</code> Dataset to <strong>89.82</strong>%.</p>
+									<h2 id="future-work">Future Work</h2>
+									<p>The same dataset can be treated with other classifiers such as Random Forest Classifier, with Hyperparameter Tuning to compare the results with XGBoost.</p>
+									<h2 id="license">License</h2>
+									<p><a href="https://choosealicense.com/licenses/mit/">MIT</a></p>
+									
+							
+
+
+									
+
+
+									<section>
+										<h2 class="major">Project Source</h2>
+										<p><a href="https://github.com/BhushanIngale/XGBoost-Optimisation">Check out the entire Project here!</a></p>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+					
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
